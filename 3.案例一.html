@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id = "app">
+<!--    根据姓和名拼接姓名,使用计算属性  -->
+    姓：<input type="text" v-model="name1">
+    名：<input type="text" v-model="name2">
+    <p>姓名：{{name}}</p>
+
+    姓名：<input type="text" v-model="allname">
+    姓：{{name11}}
+    名：{{name22}}
+
+
+
+
+
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            name1:"",
+            name2:"",
+
+            allname:"",
+            name11:"",
+            name22:""
+
+
+
+        },
+        computed:{
+            name(){
+                return this.name1+this.name2;
+            }
+        },
+        watch:{
+            allname(){
+                let name = this.allname.split(" ")
+                this.name11=name[0];
+                this.name22=name[1];
+
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

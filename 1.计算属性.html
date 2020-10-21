@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id = "app">
+    <!--  多个变量的显示依赖于一个变量  -->
+    <p @click="add">{{num}}</p>
+    <p>十位：{{parseInt(num/10)}}</p>
+    <p>个位：{{num%10}}</p>
+    <hr>
+    十位：<input type="text" v-model="shi">
+    个位：<input type="text" v-model="ge">
+    <span>{{result}}</span>
+
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            num:25,
+            shi:"",
+            ge:"",
+
+        },
+        methods:{
+            add(){
+                this.num++;
+            }
+        },
+        //computed用来声明方法属性
+        //声明的方法属性不能在data中重复定义
+        //定义的方法属性必须在页面中渲染使用才生效 才会对内部的变量进行监听
+        computed:{
+            //定义方法属性
+            result(){
+                console.log("11111")
+                return this.shi*10+ +this.ge;
+            }
+        }
+
+    })
+</script>
+
+</body>
+</html>

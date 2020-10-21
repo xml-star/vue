@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // 正常函数
+    function add(a,b){
+        console.log(a+b)
+    }
+    // add(2,3)
+    // 匿名函数
+    let add2=function (a,b,c){
+        console.log(a+b+c)
+    }
+    // add2(2,3,4)
+    // 箭头函数其实就是对匿名函数的简化
+    let add3 = (a,b,c) => console.log(a+b+c)
+    // add3(2,3,4)
+    let add4 = function(a,b) {
+        console.log(a+b);
+        console.log(a+b);
+    }
+    // add4(3,3)
+    let app5 = (a,b) => {
+        console.log(a+b);
+        console.log(a*b);
+    }
+    app5(6,5)
+
+
+</script>
+
+
+</body>
+</html>

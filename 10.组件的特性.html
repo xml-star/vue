@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id = "app">
+    <com></com>
+
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    let com = {
+        template:`
+            <div>
+            <button @click="change">点击我</button>
+            <div>我是嵌套的div,{{number}}</div>
+        </div>
+
+        `,
+        methods:{
+            change(){
+                this.number--;
+            }
+        },
+        data:function (){
+            return{
+                number:40,
+            }
+
+        }
+    }
+    Vue.component("com",com)
+    new Vue({
+        el:"#app",
+        data:{
+
+        },
+    })
+</script>
+
+</body>
+</html>

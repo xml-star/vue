@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let app= (x,y) => console.log(x*y);
+    // app(1,2)
+
+    let app1 = x => console.log(x+3)
+    // app1(5)
+
+    let app3 = function(a,b){
+        return a+b
+    }
+    let num = app3(4,5)
+    console.log(num);
+
+    let app4 = (a,b) => a+b;
+    let num2 = (2,3)
+    console.log(num2)
+
+    let app5 = a => a+5;
+    let app6 = function(a){
+        return a+5;
+    }
+    // 如果函数没有参数 则()不省略
+    let app7=()=>console.log("hello")
+    app7()
+
+</script>
+
+</body>
+</html>
